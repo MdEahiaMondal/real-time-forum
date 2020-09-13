@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Question;
 use App\Models\Replay;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -23,7 +25,13 @@ class ReplayFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'body' => $this->faker->text,
+            'question_id' => function(){
+                return Question::all()->random();
+            },
+            'user_id' => function(){
+                return User::all()->random();
+            },
         ];
     }
 }
