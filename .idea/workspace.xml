@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="make a migration with model and resource controller">
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="fill migration file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_003417_create_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_003417_create_questions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_003435_create_replays_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_003435_create_replays_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_003447_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_003447_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_003457_create_likes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_003457_create_likes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Replay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Replay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +165,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -182,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599955753103</updated>
       <workItem from="1599955754280" duration="1049000" />
-      <workItem from="1599956823175" duration="1313000" />
+      <workItem from="1599956823175" duration="2665000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -198,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599957385331</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fill migration file">
+      <created>1599958193641</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599958193641</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,13 +226,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="install ui for auth" />
     <MESSAGE value="make a migration with model and resource controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="make a migration with model and resource controller" />
+    <MESSAGE value="fill migration file" />
+    <option name="LAST_COMMIT_MESSAGE" value="fill migration file" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1599957387004">
+    <state x="13" y="14" key="SettingsEditor" timestamp="1599959906755">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1599957387004" />
+    <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599959906755" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1599958195248">
+      <screen x="0" y="0" width="1024" height="738" />
+    </state>
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1599958195248" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
