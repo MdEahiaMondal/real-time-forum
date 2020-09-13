@@ -13,8 +13,9 @@ class Category extends Model
 
     public function getRouteKeyName()
     {
-        return parent::getRouteKeyName($this->slug);
+        return 'slug';
     }
+
 
 
     public function questions(){

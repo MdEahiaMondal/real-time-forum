@@ -2,84 +2,60 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Question;
 use App\Models\Replay;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class ReplayController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function index(Question $question)
     {
-        //
+        return response()->json([
+            'replies' => $question->replies,
+            'message' => null
+        ], Response::HTTP_OK);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function store(Question $question, Request $request)
     {
-        //
+        $replay = $question->replies()->create($request->all());
+        return response()->json([
+            'replay' => $replay,
+            'message' => 'A new replay created success'
+        ], Response::HTTP_CREATED);
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function show(Question $question, Replay $reply)
     {
-        //
+        $reply = $reply->with('user')->find($reply->id);
+        return response()->json([
+            'reply' => $reply,
+            'message' => null
+        ], 200);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Replay  $replay
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Replay $replay)
+
+    public function update(Question $question, Request $request, Replay $reply)
     {
-        //
+        $updated_replay = $reply->update($request->all());
+        return response()->json([
+            'replay' => $updated_replay,
+            'message' => 'Replay updated success'
+        ], 200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Replay  $replay
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Replay $replay)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Replay  $replay
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Replay $replay)
+    public function destroy(Replay $reply)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Replay  $replay
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Replay $replay)
-    {
-        //
+        $reply->delete();
+        return response()->json([
+            'replay' => null,
+            'message' => 'Replay deleted success'
+        ], 200);
     }
 }

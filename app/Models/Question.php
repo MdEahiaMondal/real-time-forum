@@ -36,7 +36,7 @@ class Question extends Model
 
     public function replies()
     {
-        return $this->hasMany(Replay::class);
+        return $this->hasMany(Replay::class, 'question_id');
     }
 
 }
