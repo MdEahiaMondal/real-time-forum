@@ -9,6 +9,14 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
+    public function getRouteKeyName()
+    {
+        return parent::getRouteKeyName($this->slug);
+    }
+
+
     public function questions(){
         return $this->hasMany(Question::class);
     }
