@@ -19,24 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="like unlike system done">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jwt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/realtimeforam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/realtimeforam.iml" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="install jwt token and implement successfully">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/JwtMiddleware.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +188,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599955753103</updated>
       <workItem from="1599955754280" duration="1049000" />
-      <workItem from="1599956823175" duration="20673000" />
+      <workItem from="1599956823175" duration="22169000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -279,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599991073506</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="install jwt token and implement successfully">
+      <created>1599996946781</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1599996946781</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +292,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="install ui for auth" />
     <MESSAGE value="make a migration with model and resource controller" />
@@ -309,13 +306,14 @@
     <MESSAGE value="question replay crude done" />
     <MESSAGE value="using resource collection on replay" />
     <MESSAGE value="like unlike system done" />
-    <option name="LAST_COMMIT_MESSAGE" value="like unlike system done" />
+    <MESSAGE value="install jwt token and implement successfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="install jwt token and implement successfully" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599961189397">
+    <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.738@0.0.1024.738" timestamp="1599961189397" />
+    <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.738@0.0.1024.738" timestamp="1599997367663" />
     <state x="13" y="14" key="SettingsEditor" timestamp="1599960867619">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
@@ -332,9 +330,9 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="168" y="165" width="672" height="677" key="run.anything.popup/0.0.1024.738@0.0.1024.738" timestamp="1599956663330" />
-    <state x="175" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1599956668177">
+    <state x="175" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1599998292041">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="175" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1024.738@0.0.1024.738" timestamp="1599956668177" />
+    <state x="175" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1024.738@0.0.1024.738" timestamp="1599998292041" />
   </component>
 </project>
