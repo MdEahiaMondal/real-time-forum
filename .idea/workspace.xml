@@ -19,15 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="implement vuetify">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/AppFooter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Toolbar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/MainHome.vue" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="define footer and toolbar">
+      <change afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/auth/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Toolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Toolbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/MainHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/MainHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -205,7 +207,7 @@
       <updated>1599955753103</updated>
       <workItem from="1599955754280" duration="1049000" />
       <workItem from="1599956823175" duration="25127000" />
-      <workItem from="1600041367911" duration="6343000" />
+      <workItem from="1600041367911" duration="8743000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -305,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600044582218</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="define footer and toolbar">
+      <created>1600047858784</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1600047858784</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +350,8 @@
     <MESSAGE value="install jwt token and implement successfully" />
     <MESSAGE value="make middleware for jwt token and handle &#10;jwt exception on handler file" />
     <MESSAGE value="implement vuetify" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement vuetify" />
+    <MESSAGE value="define footer and toolbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="define footer and toolbar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
