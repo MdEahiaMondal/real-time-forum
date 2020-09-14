@@ -19,17 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="define footer and toolbar">
-      <change afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/auth/Login.vue" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="install vue-router and implement and make login pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Toolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Toolbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/MainHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/MainHome.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/auth/Login.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +174,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
@@ -207,7 +199,9 @@
       <updated>1599955753103</updated>
       <workItem from="1599955754280" duration="1049000" />
       <workItem from="1599956823175" duration="25127000" />
-      <workItem from="1600041367911" duration="8743000" />
+      <workItem from="1600041367911" duration="9587000" />
+      <workItem from="1600071398463" duration="26000" />
+      <workItem from="1600126927010" duration="499000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -314,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600047858784</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="install vue-router and implement and make login pages">
+      <created>1600051770096</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1600051770096</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,17 +352,18 @@
     <MESSAGE value="make middleware for jwt token and handle &#10;jwt exception on handler file" />
     <MESSAGE value="implement vuetify" />
     <MESSAGE value="define footer and toolbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="define footer and toolbar" />
+    <MESSAGE value="install vue-router and implement and make login pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="install vue-router and implement and make login pages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.738@0.0.1024.738" timestamp="1599997367663" />
-    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1599999863189">
+    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1600071422943">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1599999863189" />
+    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1600071422943" />
     <state x="13" y="14" key="SettingsEditor" timestamp="1599960867619">
       <screen x="0" y="0" width="1024" height="738" />
     </state>

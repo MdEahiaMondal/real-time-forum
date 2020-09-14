@@ -10,6 +10,7 @@
                 >
                     <v-form
                         ref="form"
+                        @submit.prevent="login"
                     >
                         <v-text-field
                             v-model="loginAttr.email"
@@ -20,7 +21,7 @@
 
                         <v-text-field
                             v-model="loginAttr.password"
-                            label="Name"
+                            label="password"
                             required
                             type="password"
                         ></v-text-field>
@@ -28,6 +29,7 @@
                         <v-btn
                             color="success"
                             class="mr-4"
+                            type="submit"
                         >
                             Login
                         </v-btn>
@@ -45,6 +47,17 @@ export default {
     data() {
         return {
             loginAttr: {}
+        }
+    },
+    methods: {
+        login(){
+            axios.post('api/auth/login', this.loginAttr)
+                .then(res => {
+                    console.log(res.data)
+                })
+                .catch(error => {
+                    console.log(error.response)
+                })
         }
     }
 }
