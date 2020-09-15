@@ -79,7 +79,7 @@ export default {
         register() {
             axios.post('api/auth/register', this.registerAttr)
             .then(res => {
-                console.log(res)
+                User.responseAfterLoggedIn(res)
             })
             .catch(e => {
                 console.log(e.response.data)

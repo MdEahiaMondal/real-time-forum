@@ -97461,7 +97461,6 @@ var User = /*#__PURE__*/function () {
     value: function responseAfterLoggedIn(res) {
       var token = res.data.access_token;
       var user = res.data.user;
-      console.log(res.data);
 
       if (_helpers_Token__WEBPACK_IMPORTED_MODULE_0__["default"].isValid(token)) {
         _helpers_AppStorage__WEBPACK_IMPORTED_MODULE_1__["default"].store(user, token);
@@ -97812,8 +97811,8 @@ var Token = /*#__PURE__*/function () {
     value: function isValid(token) {
       var payload = this.payload(token);
 
-      if (payload.iss === 'http://localhost:8000/api/auth/login') {
-        return true;
+      if (payload) {
+        return payload.iss === 'http://localhost:8000/api/auth/login' || 'http://localhost:8000/api/auth/register' ? true : false;
       }
 
       return false;

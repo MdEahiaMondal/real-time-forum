@@ -19,15 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="more sucre jwt token on frontend">
-      <change afterPath="$PROJECT_DIR$/resources/js/views/auth/Register.vue" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="make a register component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/auth/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/apis/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/apis/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/helpers/Token.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/helpers/Token.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/auth/Register.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +178,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/views/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
@@ -208,7 +206,8 @@
       <workItem from="1599956823175" duration="25127000" />
       <workItem from="1600041367911" duration="9587000" />
       <workItem from="1600071398463" duration="26000" />
-      <workItem from="1600126927010" duration="9741000" />
+      <workItem from="1600126927010" duration="10048000" />
+      <workItem from="1600212157865" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -350,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600134744870</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="make a register component">
+      <created>1600137213305</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1600137213305</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,25 +398,26 @@
     <MESSAGE value="make a helpers AppStorage form save something on local app storage" />
     <MESSAGE value="check token validating" />
     <MESSAGE value="more sucre jwt token on frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="more sucre jwt token on frontend" />
+    <MESSAGE value="make a register component" />
+    <option name="LAST_COMMIT_MESSAGE" value="make a register component" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.738@0.0.1024.738" timestamp="1599997367663" />
-    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1600071422943">
+    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1600137240462">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1600071422943" />
+    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1600137240462" />
     <state x="13" y="14" key="SettingsEditor" timestamp="1599960867619">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600134747408">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600137214910">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600134747408" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600137214910" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>

@@ -17,7 +17,6 @@ class User {
     responseAfterLoggedIn(res){
         const token = res.data.access_token
         const user = res.data.user
-        console.log(res.data)
        if(Token.isValid(token)){
             AppStorage.store(user, token)
        }
