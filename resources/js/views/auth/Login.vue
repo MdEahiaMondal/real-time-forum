@@ -59,6 +59,7 @@ export default {
     methods: {
         login(){
             User.login(this.loginAttr)
+            this.$router.push({name: 'forum'})
         }
     }
 }

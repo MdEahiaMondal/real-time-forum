@@ -16,6 +16,11 @@ const routes = [
         name: 'register',
         component: () => import('../views/auth/Register')
     },
+    {
+        path: '/forum',
+        name: 'forum',
+        component: () => import('../views/forum/Forum')
+    },
 
 ]
 

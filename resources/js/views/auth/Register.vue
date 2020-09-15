@@ -80,6 +80,7 @@ export default {
             axios.post('api/auth/register', this.registerAttr)
             .then(res => {
                 User.responseAfterLoggedIn(res)
+                this.$router.push({name: 'forum'})
             })
             .catch(e => {
                 console.log(e.response.data)

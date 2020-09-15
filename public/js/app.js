@@ -2075,6 +2075,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Toolbar"
 });
@@ -38364,11 +38365,13 @@ var render = function() {
             "div",
             { staticClass: "hidden-sm-and-down" },
             [
-              _c("v-btn", { attrs: { text: "" } }, [_vm._v("Home")]),
+              _c("v-btn", { attrs: { text: "" } }, [_vm._v("Forum")]),
               _vm._v(" "),
               _c("v-btn", { attrs: { text: "" } }, [_vm._v("Ask Question")]),
               _vm._v(" "),
               _c("v-btn", { attrs: { text: "" } }, [_vm._v("Category")]),
+              _vm._v(" "),
+              _c("v-btn", { attrs: { text: "" } }, [_vm._v("Logout")]),
               _vm._v(" "),
               _c(
                 "router-link",
@@ -97887,6 +97890,12 @@ var routes = [{
   name: 'register',
   component: function component() {
     return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../views/auth/Register */ "./resources/js/views/auth/Register.vue"));
+  }
+}, {
+  path: '/forum',
+  name: 'forum',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../views/forum/Forum */ "./resources/js/views/forum/Forum.vue"));
   }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
