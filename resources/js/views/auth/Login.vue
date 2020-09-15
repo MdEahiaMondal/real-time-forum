@@ -51,13 +51,7 @@ export default {
     },
     methods: {
         login(){
-            axios.post('api/auth/login', this.loginAttr)
-                .then(res => {
-                    console.log(res.data)
-                })
-                .catch(error => {
-                    console.log(error.response)
-                })
+            User.login(this.loginAttr)
         }
     }
 }

@@ -4,6 +4,8 @@ require('./bootstrap');
 
 Vue.component('main-home', require('./views/MainHome').default);
 
+import User from "./apis/User";
+window.User = User
 
 
 import vuetify from './plugins/vuetify'
