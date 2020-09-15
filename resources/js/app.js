@@ -7,8 +7,6 @@ Vue.component('main-home', require('./views/MainHome').default);
 import User from "./apis/User";
 window.User = User
 
-console.log(User.id())
-
 
 import vuetify from './plugins/vuetify'
 import router from './router/index'

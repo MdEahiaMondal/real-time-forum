@@ -97533,7 +97533,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('main-home', __webpack_require__(/*! ./views/MainHome */ "./resources/js/views/MainHome.vue")["default"]);
 
 window.User = _apis_User__WEBPACK_IMPORTED_MODULE_1__["default"];
-console.log(_apis_User__WEBPACK_IMPORTED_MODULE_1__["default"].id());
 
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
@@ -97883,6 +97882,12 @@ var routes = [{
   name: 'login',
   component: function component() {
     return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../views/auth/Login */ "./resources/js/views/auth/Login.vue"));
+  }
+}, {
+  path: '/register',
+  name: 'register',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../views/auth/Register */ "./resources/js/views/auth/Register.vue"));
   }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({

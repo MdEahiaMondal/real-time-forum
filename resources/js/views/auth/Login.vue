@@ -33,7 +33,14 @@
                         >
                             Login
                         </v-btn>
-
+                        <router-link :to="{name: 'register'}">
+                            <v-btn
+                                color="primary"
+                                class="mr-4 btn btn-primary"
+                            >
+                                Sign Up
+                            </v-btn>
+                        </router-link>
                     </v-form>
                 </v-card>
             </v-col>
