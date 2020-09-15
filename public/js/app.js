@@ -97429,11 +97429,13 @@ module.exports = function(module) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helpers_Token__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/Token */ "./resources/js/helpers/Token.js");
+/* harmony import */ var _helpers_AppStorage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helpers/AppStorage */ "./resources/js/helpers/AppStorage.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 
 
 
@@ -97445,11 +97447,61 @@ var User = /*#__PURE__*/function () {
   _createClass(User, [{
     key: "login",
     value: function login(data) {
+      var _this = this;
+
       axios.post('api/auth/login', data).then(function (res) {
-        console.log(_helpers_Token__WEBPACK_IMPORTED_MODULE_0__["default"].isValid(res.data.access_token));
+        _this.responseAfterLoggedIn(res);
       })["catch"](function (error) {
         console.log(error.response);
       });
+    } //save user info and token on local storage to user browser
+
+  }, {
+    key: "responseAfterLoggedIn",
+    value: function responseAfterLoggedIn(res) {
+      var token = res.data.access_token;
+      var user = res.data.user;
+      console.log(res.data);
+
+      if (_helpers_Token__WEBPACK_IMPORTED_MODULE_0__["default"].isValid(token)) {
+        _helpers_AppStorage__WEBPACK_IMPORTED_MODULE_1__["default"].store(user, token);
+      }
+    }
+  }, {
+    key: "hasToken",
+    value: function hasToken() {
+      var appToken = _helpers_AppStorage__WEBPACK_IMPORTED_MODULE_1__["default"].getToken();
+
+      if (appToken) {
+        return _helpers_Token__WEBPACK_IMPORTED_MODULE_0__["default"].isValid(appToken) ? true : false;
+      }
+
+      return false;
+    }
+  }, {
+    key: "loggedIn",
+    value: function loggedIn() {
+      return this.hasToken();
+    }
+  }, {
+    key: "logout",
+    value: function logout() {
+      _helpers_AppStorage__WEBPACK_IMPORTED_MODULE_1__["default"].clear();
+    }
+  }, {
+    key: "name",
+    value: function name() {
+      if (this.loggedIn()) {
+        return _helpers_AppStorage__WEBPACK_IMPORTED_MODULE_1__["default"].getUser();
+      }
+    }
+  }, {
+    key: "id",
+    value: function id() {
+      if (this.loggedIn()) {
+        var token = _helpers_Token__WEBPACK_IMPORTED_MODULE_0__["default"].payload(_helpers_AppStorage__WEBPACK_IMPORTED_MODULE_1__["default"].getToken());
+        return token.sub;
+      }
     }
   }]);
 
@@ -97481,6 +97533,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('main-home', __webpack_require__(/*! ./views/MainHome */ "./resources/js/views/MainHome.vue")["default"]);
 
 window.User = _apis_User__WEBPACK_IMPORTED_MODULE_1__["default"];
+console.log(_apis_User__WEBPACK_IMPORTED_MODULE_1__["default"].id());
 
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
@@ -97671,6 +97724,67 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_template_id_43b87f60_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/helpers/AppStorage.js":
+/*!********************************************!*\
+  !*** ./resources/js/helpers/AppStorage.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var AppStorage = /*#__PURE__*/function () {
+  function AppStorage() {
+    _classCallCheck(this, AppStorage);
+  }
+
+  _createClass(AppStorage, [{
+    key: "storeToken",
+    value: function storeToken(token) {
+      localStorage.setItem('token', token);
+    }
+  }, {
+    key: "storeUser",
+    value: function storeUser(user) {
+      localStorage.setItem('user', user);
+    }
+  }, {
+    key: "store",
+    value: function store(user, token) {
+      this.storeToken(token);
+      this.storeUser(user);
+    }
+  }, {
+    key: "clear",
+    value: function clear() {
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+    }
+  }, {
+    key: "getUser",
+    value: function getUser() {
+      return localStorage.getItem('user');
+    }
+  }, {
+    key: "getToken",
+    value: function getToken() {
+      return localStorage.getItem('token');
+    }
+  }]);
+
+  return AppStorage;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (AppStorage = new AppStorage());
 
 /***/ }),
 
