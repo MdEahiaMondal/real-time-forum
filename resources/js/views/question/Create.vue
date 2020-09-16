@@ -20,9 +20,17 @@
                         v-model="categoryAttr.category_id"
                         :items="categories"
                         item-text="title"
-                        id="id"
+                        item-value="id"
                         label="Category"
                     ></v-select>
+                    <vue-simplemde v-model="categoryAttr.content" ref="markdownEditor" />
+                    <v-btn
+                        color="success"
+                        class="mr-4"
+                        type="submit"
+                    >
+                        Create
+                    </v-btn>
                 </v-form>
             </v-card>
         </v-col>
@@ -35,7 +43,6 @@ export default {
     created() {
         axios.get('http://localhost:8000/api/categories')
             .then(res => {
-                console.log(res)
                 this.categories = res.data
             })
     },
@@ -48,7 +55,13 @@ export default {
     },
     methods: {
         createQues() {
-            console.log(this.categoryAttr)
+            axios.post('http://localhost:8000/api/questions', this.categoryAttr)
+                .then(res => {
+                    console.log(res)
+                })
+            .catch(e => {
+                console.log(e.response.data.message)
+            })
         }
     }
 }
