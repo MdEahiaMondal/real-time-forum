@@ -18,19 +18,24 @@
 
 <script>
 export default {
-name: "Toolbar",
-    data()
-    {
+    name: "Toolbar",
+    data() {
         return {
             menus: [
-                {title: 'Forum', toName: 'forum',show: true},
-                {title: 'Ask Question', toName: 'askQuestion',show: User.loggedIn()},
-                {title: 'Category', toName: 'category',show: User.loggedIn()},
-                {title: 'Login', toName: 'login',show: !User.loggedIn()},
-                {title: 'Logout', toName: 'logout',show: User.loggedIn()},
+                {title: 'Forum', toName: 'forum', show: true},
+                {title: 'Ask Question', toName: 'askQuestion', show: User.loggedIn()},
+                {title: 'Category', toName: 'category', show: User.loggedIn()},
+                {title: 'Logout', toName: 'logout', show: User.loggedIn()},
+                {title: 'Login', toName: 'login', show: !User.loggedIn()},
             ]
         }
-    }
+    },
+
+    created() {
+        EventBus.$on('logout', () => {
+            User.logout()
+        })
+    },
 }
 </script>
 

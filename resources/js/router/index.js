@@ -17,6 +17,11 @@ const routes = [
         component: () => import('../views/auth/Register')
     },
     {
+        path: '/logout',
+        name: 'logout',
+        component: () => import('../views/auth/Logout')
+    },
+    {
         path: '/forum',
         name: 'forum',
         component: () => import('../views/forum/Forum')

@@ -2088,15 +2088,20 @@ __webpack_require__.r(__webpack_exports__);
         toName: 'category',
         show: User.loggedIn()
       }, {
-        title: 'Login',
-        toName: 'login',
-        show: !User.loggedIn()
-      }, {
         title: 'Logout',
         toName: 'logout',
         show: User.loggedIn()
+      }, {
+        title: 'Login',
+        toName: 'login',
+        show: !User.loggedIn()
       }]
     };
+  },
+  created: function created() {
+    EventBus.$on('logout', function () {
+      User.logout();
+    });
   }
 });
 
@@ -97466,19 +97471,8 @@ var User = /*#__PURE__*/function () {
   }
 
   _createClass(User, [{
-    key: "login",
-    value: function login(data) {
-      var _this = this;
-
-      axios.post('api/auth/login', data).then(function (res) {
-        _this.responseAfterLoggedIn(res);
-      })["catch"](function (error) {
-        console.log(error.response);
-      });
-    } //save user info and token on local storage to user browser
-
-  }, {
     key: "responseAfterLoggedIn",
+    //save user info and token on local storage to user browser
     value: function responseAfterLoggedIn(res) {
       var token = res.data.access_token;
       var user = res.data.user;
@@ -97507,6 +97501,7 @@ var User = /*#__PURE__*/function () {
     key: "logout",
     value: function logout() {
       _helpers_AppStorage__WEBPACK_IMPORTED_MODULE_1__["default"].clear();
+      window.location = '/forum';
     }
   }, {
     key: "name",
@@ -97553,6 +97548,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('main-home', __webpack_require__(/*! ./views/MainHome */ "./resources/js/views/MainHome.vue")["default"]);
 
 window.User = _apis_User__WEBPACK_IMPORTED_MODULE_1__["default"];
+window.EventBus = new vue__WEBPACK_IMPORTED_MODULE_0___default.a();
 
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
@@ -97908,6 +97904,12 @@ var routes = [{
   name: 'register',
   component: function component() {
     return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../views/auth/Register */ "./resources/js/views/auth/Register.vue"));
+  }
+}, {
+  path: '/logout',
+  name: 'logout',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../views/auth/Logout */ "./resources/js/views/auth/Logout.vue"));
   }
 }, {
   path: '/forum',

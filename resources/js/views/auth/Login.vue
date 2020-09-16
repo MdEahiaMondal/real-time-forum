@@ -63,8 +63,14 @@ export default {
     },
     methods: {
         login(){
-            User.login(this.loginAttr)
-            this.$router.push({name: 'forum'})
+            axios.post('api/auth/login', this.loginAttr)
+                .then(res => {
+                    this.responseAfterLoggedIn(res)
+                    this.$router.push({name: 'forum'})
+                })
+                .catch(error => {
+                    console.log(error.response)
+                })
         }
     }
 }
