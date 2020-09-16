@@ -2071,13 +2071,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Toolbar"
+  name: "Toolbar",
+  data: function data() {
+    return {
+      menus: [{
+        title: 'Forum',
+        toName: 'forum',
+        show: true
+      }, {
+        title: 'Ask Question',
+        toName: 'askQuestion',
+        show: User.loggedIn()
+      }, {
+        title: 'Category',
+        toName: 'category',
+        show: User.loggedIn()
+      }, {
+        title: 'Login',
+        toName: 'login',
+        show: !User.loggedIn()
+      }, {
+        title: 'Logout',
+        toName: 'logout',
+        show: User.loggedIn()
+      }]
+    };
+  }
 });
 
 /***/ }),
@@ -38364,22 +38384,20 @@ var render = function() {
           _c(
             "div",
             { staticClass: "hidden-sm-and-down" },
-            [
-              _c("v-btn", { attrs: { text: "" } }, [_vm._v("Forum")]),
-              _vm._v(" "),
-              _c("v-btn", { attrs: { text: "" } }, [_vm._v("Ask Question")]),
-              _vm._v(" "),
-              _c("v-btn", { attrs: { text: "" } }, [_vm._v("Category")]),
-              _vm._v(" "),
-              _c("v-btn", { attrs: { text: "" } }, [_vm._v("Logout")]),
-              _vm._v(" "),
-              _c(
-                "router-link",
-                { attrs: { to: { name: "login" } } },
-                [_c("v-btn", { attrs: { text: "" } }, [_vm._v("Login")])],
-                1
-              )
-            ],
+            _vm._l(_vm.menus, function(menu) {
+              return menu.show
+                ? _c(
+                    "router-link",
+                    { key: menu.title, attrs: { to: { name: menu.toName } } },
+                    [
+                      _c("v-btn", { attrs: { text: "" } }, [
+                        _vm._v(_vm._s(menu.title))
+                      ])
+                    ],
+                    1
+                  )
+                : _vm._e()
+            }),
             1
           )
         ],

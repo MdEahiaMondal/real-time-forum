@@ -68,6 +68,11 @@
 
 <script>
 export default {
+    beforeCreate() {
+        if (User.loggedIn()){
+            this.$router.push({name: 'forum'})
+        }
+    },
     name: "Register",
     data() {
         return {

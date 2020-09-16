@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="assign register iss after register">
-      <change afterPath="$PROJECT_DIR$/resources/js/views/forum/Forum.vue" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="after login or register return redirect to other page">
       <change beforePath="$PROJECT_DIR$/resources/js/components/Toolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Toolbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +202,7 @@
       <workItem from="1600041367911" duration="9587000" />
       <workItem from="1600071398463" duration="26000" />
       <workItem from="1600126927010" duration="10048000" />
-      <workItem from="1600212157865" duration="1623000" />
+      <workItem from="1600212157865" duration="2233000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -360,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600213036721</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="after login or register return redirect to other page">
+      <created>1600214085932</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1600214085932</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +409,8 @@
     <MESSAGE value="more sucre jwt token on frontend" />
     <MESSAGE value="make a register component" />
     <MESSAGE value="assign register iss after register" />
-    <option name="LAST_COMMIT_MESSAGE" value="assign register iss after register" />
+    <MESSAGE value="after login or register return redirect to other page" />
+    <option name="LAST_COMMIT_MESSAGE" value="after login or register return redirect to other page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
@@ -419,10 +425,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600213038381">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600214087415">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600213038381" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600214087415" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
