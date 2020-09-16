@@ -97917,6 +97917,12 @@ var routes = [{
   component: function component() {
     return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../views/forum/Forum */ "./resources/js/views/forum/Forum.vue"));
   }
+}, {
+  path: '/forum/question/:slug',
+  name: 'question-show',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../views/forum/QuestionShow */ "./resources/js/views/forum/QuestionShow.vue"));
+  }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: routes,

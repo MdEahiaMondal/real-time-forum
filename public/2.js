@@ -37,6 +37,20 @@ __webpack_require__.r(__webpack_exports__);
   name: "Forum",
   components: {
     Question: _Question__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      questions: []
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('api/questions').then(function (res) {
+      _this.questions = res.data.data;
+    })["catch"](function (e) {
+      console.log(e.response);
+    });
   }
 });
 
@@ -62,8 +76,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Question"
+  name: "Question",
+  props: ['question']
 });
 
 /***/ }),
@@ -93,7 +115,12 @@ var render = function() {
           _c(
             "v-card",
             { staticClass: "pa-2", attrs: { outlined: "", tile: "" } },
-            [_c("question")],
+            _vm._l(_vm.questions, function(question) {
+              return _c("question", {
+                key: question.id,
+                attrs: { question: question }
+              })
+            }),
             1
           )
         ],
@@ -138,19 +165,44 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-card-text", [
-    _c("p", { staticClass: "display-1 text--primary" }, [
-      _vm._v("be•nev•o•len")
-    ]),
-    _vm._v(" "),
-    _c("span", { staticClass: "grey--text" }, [_vm._v("Word of the Day")]),
-    _vm._v(" "),
-    _c("div", { staticClass: "text--primary" }, [
-      _vm._v("\n        well meaning and kindly."),
-      _c("br"),
-      _vm._v('\n        "a benevolent smile"\n    ')
-    ])
-  ])
+  return _c(
+    "div",
+    [
+      _c(
+        "v-card-title",
+        { staticClass: "headline text--primary" },
+        [
+          _c(
+            "router-link",
+            {
+              attrs: {
+                to: {
+                  name: "question-show",
+                  params: { slug: _vm.question.slug }
+                }
+              }
+            },
+            [
+              _vm._v(
+                "\n            " + _vm._s(_vm.question.title) + "\n        "
+              )
+            ]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("v-card-subtitle", [
+        _c("strong", [_vm._v(_vm._s(_vm.question.user.name))]),
+        _vm._v(" said " + _vm._s(_vm.question.created_at))
+      ]),
+      _vm._v(" "),
+      _c("v-card-text", { staticClass: "text--primary" }, [
+        _c("div", [_vm._v(_vm._s(_vm.question.content))])
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

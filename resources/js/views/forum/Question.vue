@@ -1,17 +1,25 @@
 <template>
-    <v-card-text>
-        <p class="display-1 text--primary">be•nev•o•len</p>
-        <span class="grey--text">Word of the Day</span>
-        <div class="text--primary">
-            well meaning and kindly.<br>
-            "a benevolent smile"
-        </div>
-    </v-card-text>
+    <div>
+
+
+
+        <v-card-title class="headline text--primary">
+            <router-link :to="{name: 'question-show', params: {slug: question.slug}}">
+                {{ question.title }}
+            </router-link>
+        </v-card-title>
+        <v-card-subtitle> <strong>{{question.user.name }}</strong> said {{ question.created_at }}</v-card-subtitle>
+        <v-card-text class="text--primary">
+            <div>{{ question.content }}</div>
+        </v-card-text>
+    </div>
+
 </template>
 
 <script>
 export default {
-name: "Question"
+name: "Question",
+    props: ['question'],
 }
 </script>
 
