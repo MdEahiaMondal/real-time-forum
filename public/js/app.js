@@ -2081,7 +2081,7 @@ __webpack_require__.r(__webpack_exports__);
         show: true
       }, {
         title: 'Ask Question',
-        toName: 'askQuestion',
+        toName: 'question-create',
         show: User.loggedIn()
       }, {
         title: 'Category',
@@ -97897,31 +97897,37 @@ var routes = [{
   path: '/login',
   name: 'login',
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../views/auth/Login */ "./resources/js/views/auth/Login.vue"));
+    return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../views/auth/Login */ "./resources/js/views/auth/Login.vue"));
   }
 }, {
   path: '/register',
   name: 'register',
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../views/auth/Register */ "./resources/js/views/auth/Register.vue"));
+    return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../views/auth/Register */ "./resources/js/views/auth/Register.vue"));
   }
 }, {
   path: '/logout',
   name: 'logout',
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../views/auth/Logout */ "./resources/js/views/auth/Logout.vue"));
+    return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../views/auth/Logout */ "./resources/js/views/auth/Logout.vue"));
   }
 }, {
   path: '/forum',
   name: 'forum',
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../views/forum/Forum */ "./resources/js/views/forum/Forum.vue"));
+    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../views/forum/Forum */ "./resources/js/views/forum/Forum.vue"));
   }
 }, {
   path: '/forum/question/:slug',
   name: 'question-show',
   component: function component() {
     return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../views/forum/QuestionShow */ "./resources/js/views/forum/QuestionShow.vue"));
+  }
+}, {
+  path: '/forum/question/create',
+  name: 'question-create',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../views/question/Create */ "./resources/js/views/question/Create.vue"));
   }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({

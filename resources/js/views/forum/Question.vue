@@ -1,8 +1,5 @@
 <template>
     <div>
-
-
-
         <v-card-title class="headline text--primary">
             <router-link :to="{name: 'question-show', params: {slug: question.slug}}">
                 {{ question.title }}

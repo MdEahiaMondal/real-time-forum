@@ -23,7 +23,7 @@ export default {
         return {
             menus: [
                 {title: 'Forum', toName: 'forum', show: true},
-                {title: 'Ask Question', toName: 'askQuestion', show: User.loggedIn()},
+                {title: 'Ask Question', toName: 'question-create', show: User.loggedIn()},
                 {title: 'Category', toName: 'category', show: User.loggedIn()},
                 {title: 'Logout', toName: 'logout', show: User.loggedIn()},
                 {title: 'Login', toName: 'login', show: !User.loggedIn()},

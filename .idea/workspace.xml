@@ -22,17 +22,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="make question component">
-      <change afterPath="$PROJECT_DIR$/public/4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/forum/QuestionShow.vue" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="show question">
+      <change afterPath="$PROJECT_DIR$/resources/js/views/question/Create.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/QuestionResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/QuestionResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Toolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Toolbar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/forum/Forum.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/forum/Forum.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/forum/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/forum/Question.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +217,8 @@
       <workItem from="1600041367911" duration="9587000" />
       <workItem from="1600071398463" duration="26000" />
       <workItem from="1600126927010" duration="10048000" />
-      <workItem from="1600212157865" duration="10583000" />
+      <workItem from="1600212157865" duration="11527000" />
+      <workItem from="1600296149521" duration="2353000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -403,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600220138515</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="show question">
+      <created>1600223175641</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1600223175641</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +431,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="make a migration with model and resource controller" />
     <MESSAGE value="fill migration file" />
     <MESSAGE value="define a relationship all model" />
     <MESSAGE value="define factory and seed" />
@@ -450,41 +455,42 @@
     <MESSAGE value="create dynamic menu" />
     <MESSAGE value="change something" />
     <MESSAGE value="make question component" />
-    <option name="LAST_COMMIT_MESSAGE" value="make question component" />
+    <MESSAGE value="show question" />
+    <option name="LAST_COMMIT_MESSAGE" value="show question" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.738@0.0.1024.738" timestamp="1599997367663" />
-    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1600137240462">
+    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1600226910217">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1600137240462" />
-    <state width="981" height="167" key="GridCell.Tab.0.bottom" timestamp="1600220294244">
+    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1600226910217" />
+    <state width="981" height="167" key="GridCell.Tab.0.bottom" timestamp="1600226911913">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state width="981" height="167" key="GridCell.Tab.0.bottom/0.0.1024.738@0.0.1024.738" timestamp="1600220294244" />
-    <state width="981" height="167" key="GridCell.Tab.0.center" timestamp="1600220294244">
+    <state width="981" height="167" key="GridCell.Tab.0.bottom/0.0.1024.738@0.0.1024.738" timestamp="1600226911913" />
+    <state width="981" height="167" key="GridCell.Tab.0.center" timestamp="1600226911913">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state width="981" height="167" key="GridCell.Tab.0.center/0.0.1024.738@0.0.1024.738" timestamp="1600220294244" />
-    <state width="981" height="167" key="GridCell.Tab.0.left" timestamp="1600220294244">
+    <state width="981" height="167" key="GridCell.Tab.0.center/0.0.1024.738@0.0.1024.738" timestamp="1600226911913" />
+    <state width="981" height="167" key="GridCell.Tab.0.left" timestamp="1600226911912">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state width="981" height="167" key="GridCell.Tab.0.left/0.0.1024.738@0.0.1024.738" timestamp="1600220294244" />
-    <state width="981" height="167" key="GridCell.Tab.0.right" timestamp="1600220294244">
+    <state width="981" height="167" key="GridCell.Tab.0.left/0.0.1024.738@0.0.1024.738" timestamp="1600226911912" />
+    <state width="981" height="167" key="GridCell.Tab.0.right" timestamp="1600226911913">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state width="981" height="167" key="GridCell.Tab.0.right/0.0.1024.738@0.0.1024.738" timestamp="1600220294244" />
+    <state width="981" height="167" key="GridCell.Tab.0.right/0.0.1024.738@0.0.1024.738" timestamp="1600226911913" />
     <state x="13" y="14" key="SettingsEditor" timestamp="1599960867619">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600220140186">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600223177183">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600220140186" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600223177183" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>

@@ -31,6 +31,11 @@ const routes = [
         name: 'question-show',
         component: () => import('../views/forum/QuestionShow')
     },
+    {
+        path: '/forum/question/create',
+        name: 'question-create',
+        component: () => import('../views/question/Create')
+    },
 
 ]
 
