@@ -57,7 +57,7 @@ export default {
         createQues() {
             axios.post('http://localhost:8000/api/questions', this.categoryAttr)
                 .then(res => {
-                    console.log(res)
+                   this.$router.push({name: 'forum'})
                 })
             .catch(e => {
                 console.log(e.response.data.message)

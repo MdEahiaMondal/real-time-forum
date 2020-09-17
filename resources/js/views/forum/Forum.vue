@@ -6,7 +6,7 @@
                     outlined
                     tile
                 >
-                    <question v-for="question in questions" :key="question.id" :question="question"></question>
+                    <question v-for="question in questions" v-if="questions" :key="question.id" :question="question"></question>
                 </v-card>
             </v-col>
             <v-col md="4">
