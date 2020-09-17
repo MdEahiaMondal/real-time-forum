@@ -20,7 +20,7 @@
                 <v-btn small icon>
                     <v-icon color="orange">mdi-pencil</v-icon>
                 </v-btn>
-                <v-btn small icon>
+                <v-btn small icon @click="deleteReplay">
                     <v-icon color="red">mdi-delete</v-icon>
                 </v-btn>
             </v-card-actions>
@@ -32,11 +32,27 @@
 <script>
 export default {
     name: "Reply",
-    props: ['reply'],
+    props: ['reply', 'index', 'questionSlug'],
     computed:
     {
         own(){
             return User.own(this.reply.user.id)
+        }
+    },
+    methods:
+    {
+        deleteReplay()
+        {
+
+            axios.delete(`http://localhost:8000/api/questions/${this.questionSlug}/replies/${this.reply.id}`)
+                .then(res => {
+                    EventBus.$emit('destroyReplay', this.index)
+                })
+                .catch(e => {
+                    console.log(e.response.data.message)
+                })
+
+
         }
     }
 }

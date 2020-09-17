@@ -51,7 +51,7 @@ class ReplayController extends Controller
     }
 
 
-    public function destroy(Replay $reply)
+    public function destroy(Question $question, Replay $reply)
     {
         $reply->delete();
         return response()->json([

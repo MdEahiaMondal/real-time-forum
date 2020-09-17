@@ -3,7 +3,7 @@
         <h1 class="p-5">All Replies</h1>
 
         <v-container>
-            <reply v-for="(reply, index) in content" :key="reply.id" :reply="reply"></reply>
+            <reply v-for="(reply, index) in content" :key="reply.id" :questionSlug="questionSlug" :index="index" :reply="reply"></reply>
            <replay-create :questionSlug="questionSlug"></replay-create>
         </v-container>
 
@@ -31,6 +31,9 @@ name: "Replies",
         {
             EventBus.$on('replayCreated', (reply) =>{
                 this.content.unshift(reply)
+            })
+            EventBus.$on('destroyReplay', (index) =>{
+                this.content.splice(index, 1)
             })
         }
     }
