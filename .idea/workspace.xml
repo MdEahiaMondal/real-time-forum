@@ -22,11 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="question delete complete">
-      <change afterPath="$PROJECT_DIR$/resources/js/views/question/Edit.vue" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="edit delete done of question">
+      <change afterPath="$PROJECT_DIR$/resources/js/views/forum/AppSidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/forum/QuestionShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/forum/QuestionShow.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/forum/Forum.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/forum/Forum.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +217,8 @@
       <workItem from="1600071398463" duration="26000" />
       <workItem from="1600126927010" duration="10048000" />
       <workItem from="1600212157865" duration="11527000" />
-      <workItem from="1600296149521" duration="11635000" />
+      <workItem from="1600296149521" duration="11998000" />
+      <workItem from="1600332679113" duration="830000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -461,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600306399553</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="edit delete done of question">
+      <created>1600308308884</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1600308308884</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +494,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="like unlike system done" />
     <MESSAGE value="install jwt token and implement successfully" />
     <MESSAGE value="make middleware for jwt token and handle &#10;jwt exception on handler file" />
     <MESSAGE value="implement vuetify" />
@@ -508,17 +518,18 @@
     <MESSAGE value="using marked for show markdown text" />
     <MESSAGE value="create a function for access permission" />
     <MESSAGE value="question delete complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="question delete complete" />
+    <MESSAGE value="edit delete done of question" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit delete done of question" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.738@0.0.1024.738" timestamp="1599997367663" />
-    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1600226910217">
+    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1600308432650">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1600226910217" />
+    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1600308432650" />
     <state width="981" height="167" key="GridCell.Tab.0.bottom" timestamp="1600226911913">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
@@ -539,10 +550,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600306400948">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600308310457">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600306400948" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600308310457" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
