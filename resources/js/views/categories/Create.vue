@@ -99,6 +99,8 @@ name: "Create",
             axios.post('http://localhost:8000/api/categories', this.categoryAttr)
                 .then(res => {
                     this.categories.unshift(res.data.category)
+                    this.categoryAttr.title = null
+                    this.editSlug = null
                 })
         },
         updateCat()
@@ -106,6 +108,8 @@ name: "Create",
             axios.put(`http://localhost:8000/api/categories/${this.editSlug}`, this.categoryAttr)
                 .then(res => {
                     this.categories.unshift(res.data.category)
+                    this.categoryAttr.title = null
+                    this.editSlug = null
                 })
         },
         deleteCategory(index, slug)
