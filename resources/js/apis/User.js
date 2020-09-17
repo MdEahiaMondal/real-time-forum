@@ -41,6 +41,12 @@ class User {
             return token.sub
         }
     }
+
+    own(id){
+        return this.id() === id
+    }
+
+
 }
 
 

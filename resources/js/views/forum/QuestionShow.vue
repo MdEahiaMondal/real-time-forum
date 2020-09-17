@@ -33,11 +33,23 @@
                     align="center"
                     justify="end"
                 >
-                    <v-icon class="mr-1">mdi-heart</v-icon>
-                    <span class="subheading mr-2">256</span>
-                    <span class="mr-1">·</span>
-                    <v-icon class="mr-1">mdi-share-variant</v-icon>
-                    <span class="subheading">45</span>
+                    <v-col md="6" v-if="access">
+                        <v-card-actions>
+                            <v-btn icon>
+                               <v-icon color="orange">mdi-border-color</v-icon>
+                            </v-btn>
+                            <v-btn icon>
+                               <v-icon color="red">mdi-delete</v-icon>
+                            </v-btn>
+                        </v-card-actions>
+                    </v-col>
+                    <v-col md="6">
+                        <v-icon class="mr-1">mdi-heart</v-icon>
+                        <span class="subheading mr-2">256</span>
+                        <span class="mr-1">·</span>
+                        <v-icon class="mr-1">mdi-share-variant</v-icon>
+                        <span class="subheading">45</span>
+                    </v-col>
                 </v-row>
             </v-list-item>
         </v-card-actions>
@@ -49,7 +61,7 @@ export default {
 name: "QuestionShow",
     data(){
         return {
-            question: ''
+            question: '',
         }
     },
     created() {
@@ -64,6 +76,10 @@ name: "QuestionShow",
         content()
         {
             return md.parse(this.question.content)
+        },
+        access()
+        {
+            return User.own(this.question.user.id)
         }
     }
 }
