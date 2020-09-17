@@ -36,6 +36,11 @@ const routes = [
         name: 'question-create',
         component: () => import('../views/question/Create')
     },
+    {
+        path: '/categories/create',
+        name: 'categories-create',
+        component: () => import('../views/categories/Create')
+    },
 
 ]
 
