@@ -22,8 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="implement markdown editor">
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="implement jwt token for every request">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +213,7 @@
       <workItem from="1600071398463" duration="26000" />
       <workItem from="1600126927010" duration="10048000" />
       <workItem from="1600212157865" duration="11527000" />
-      <workItem from="1600296149521" duration="4123000" />
+      <workItem from="1600296149521" duration="4947000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -416,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600300061628</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="implement jwt token for every request">
+      <created>1600300454104</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1600300454104</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +447,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="define factory and seed" />
     <MESSAGE value="define on model getRouteKeyName for identify change id by slug" />
     <MESSAGE value="create api resource collection for question and getPathAttribute on model" />
     <MESSAGE value="crude category done" />
@@ -463,7 +471,8 @@
     <MESSAGE value="show question" />
     <MESSAGE value="create question form" />
     <MESSAGE value="implement markdown editor" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement markdown editor" />
+    <MESSAGE value="implement jwt token for every request" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement jwt token for every request" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
@@ -494,10 +503,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600300063246">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600300455684">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600300063246" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600300455684" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>

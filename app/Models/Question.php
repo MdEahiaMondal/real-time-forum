@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+use phpDocumentor\Reflection\Types\This;
 
 class Question extends Model
 {
@@ -12,6 +14,15 @@ class Question extends Model
 
     protected $guarded = [];
 
+    public static function boot()
+    {
+        parent::boot(); // we use parent of Model boot
+
+        // using for automatic create a slug using title
+        static::creating(function ($question){
+            $question->slug = Str::slug($question->title);
+        });
+    }
 
     public function getRouteKeyName()
     {
