@@ -17,7 +17,7 @@ class ReplayResource extends JsonResource
         return [
             'id' => $this->id,
             'body' => $this->body,
-            'user' => $this->user->name,
+            'user' => $this->user,
             'created_at' => $this->created_at->diffForHumans()
         ];
     }

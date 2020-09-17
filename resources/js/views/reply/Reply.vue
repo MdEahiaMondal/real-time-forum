@@ -10,12 +10,20 @@
                     ></v-img>
                 </v-list-item-avatar>
                 <v-list-item-content>
-                    <v-list-item-title>{{ reply.user ? reply.user : '' }} said {{ reply.created_at }}</v-list-item-title>
+                    <v-list-item-title>{{ reply.user ? reply.user.name : '' }} said {{ reply.created_at }}</v-list-item-title>
                 </v-list-item-content>
                 <v-card-text>
                     {{ reply.body }}
                 </v-card-text>
             </v-card-title>
+            <v-card-actions v-if="own">
+                <v-btn small icon>
+                    <v-icon color="orange">mdi-pencil</v-icon>
+                </v-btn>
+                <v-btn small icon>
+                    <v-icon color="red">mdi-delete</v-icon>
+                </v-btn>
+            </v-card-actions>
             <v-divider></v-divider>
         </v-card>
     </div>
@@ -24,7 +32,13 @@
 <script>
 export default {
     name: "Reply",
-    props: ['reply']
+    props: ['reply'],
+    computed:
+    {
+        own(){
+            return User.own(this.reply.user.id)
+        }
+    }
 }
 </script>
 
