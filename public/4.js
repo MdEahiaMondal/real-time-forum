@@ -90,6 +90,19 @@ __webpack_require__.r(__webpack_exports__);
     access: function access() {
       return User.own(this.question.user.id);
     }
+  },
+  methods: {
+    deleteQuestion: function deleteQuestion() {
+      var _this2 = this;
+
+      axios["delete"]("http://localhost:8000/api/questions/".concat(this.question.slug)).then(function (res) {
+        _this2.$router.push({
+          name: 'forum'
+        });
+      })["catch"](function (e) {
+        console.log(e.response.data.message);
+      });
+    }
   }
 });
 
@@ -206,7 +219,10 @@ var render = function() {
                                   _vm._v(" "),
                                   _c(
                                     "v-btn",
-                                    { attrs: { icon: "" } },
+                                    {
+                                      attrs: { icon: "" },
+                                      on: { click: _vm.deleteQuestion }
+                                    },
                                     [
                                       _c(
                                         "v-icon",

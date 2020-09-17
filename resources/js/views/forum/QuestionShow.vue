@@ -38,7 +38,7 @@
                             <v-btn icon>
                                <v-icon color="orange">mdi-border-color</v-icon>
                             </v-btn>
-                            <v-btn icon>
+                            <v-btn icon @click="deleteQuestion">
                                <v-icon color="red">mdi-delete</v-icon>
                             </v-btn>
                         </v-card-actions>
@@ -80,6 +80,18 @@ name: "QuestionShow",
         access()
         {
             return User.own(this.question.user.id)
+        }
+    },
+    methods:
+    {
+        deleteQuestion(){
+            axios.delete(`http://localhost:8000/api/questions/${this.question.slug}`)
+                .then(res => {
+                    this.$router.push({name: 'forum'})
+                })
+                .catch(e => {
+                    console.log(e.response.data.message)
+                })
         }
     }
 }
