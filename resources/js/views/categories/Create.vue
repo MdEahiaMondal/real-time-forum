@@ -19,9 +19,19 @@
                             ></v-text-field>
 
                             <v-btn
+                                color="primary"
+                                class="mr-4"
+                                type="submit"
+                                v-if="editSlug"
+                            >
+                                Update
+                            </v-btn>
+
+                            <v-btn
                                 color="success"
                                 class="mr-4"
                                 type="submit"
+                                v-else
                             >
                                 Create
                             </v-btn>
@@ -36,8 +46,8 @@
                                 <v-toolbar-title>Categories</v-toolbar-title>
                             </v-toolbar>
 
-                            <div  v-for="item in categories"
-                                  :key="item.id">
+                            <div  v-for="(item, index ) in categories"
+                                  :key="index">
 
                                 <v-list>
                                     <v-list-item>
@@ -45,10 +55,10 @@
                                             <v-list-item-title v-text="item.title"></v-list-item-title>
                                         </v-list-item-content>
                                     </v-list-item>
-                                    <v-list-item-icon>
+                                    <v-list-item-icon @click="editCategory(index, item.slug)">
                                         <v-icon color="orange">mdi-pencil</v-icon>
                                     </v-list-item-icon>
-                                    <v-list-item-icon>
+                                    <v-list-item-icon @click="deleteCategory(index, item.slug)">
                                         <v-icon color="red">mdi-delete</v-icon>
                                     </v-list-item-icon>
                                 </v-list>
@@ -73,16 +83,43 @@ name: "Create",
     data()
     {
         return {
-            categoryAttr:{},
-            categories: []
+            categoryAttr:{
+                title: null
+            },
+            categories: [],
+            editSlug: null
         }
     },
     methods: {
         submitCategory(){
+            this.editSlug ? this.updateCat() : this.createCat()
+        },
+        createCat()
+        {
             axios.post('http://localhost:8000/api/categories', this.categoryAttr)
                 .then(res => {
-                    console.log(res)
+                    this.categories.unshift(res.data.category)
                 })
+        },
+        updateCat()
+        {
+            axios.put(`http://localhost:8000/api/categories/${this.editSlug}`, this.categoryAttr)
+                .then(res => {
+                    this.categories.unshift(res.data.category)
+                })
+        },
+        deleteCategory(index, slug)
+        {
+            axios.delete(`http://localhost:8000/api/categories/${slug}`)
+                .then(res => {
+                    console.log(res)
+                    this.categories.splice(index, 1)
+                })
+        },
+        editCategory(index, slug){
+            this.editSlug = slug
+            this.categoryAttr.title = this.categories[index].title
+            this.categories.splice(index, 1);
         }
     }
 }

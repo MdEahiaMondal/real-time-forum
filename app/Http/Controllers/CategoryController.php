@@ -23,8 +23,12 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        Category::create($request->all());
-        return response()->json('created', Response::HTTP_CREATED);
+        $category = Category::create($request->all());
+        return response()->json([
+            'success' => true,
+            'message' => 'category crated success',
+            'category' => $category
+        ], Response::HTTP_CREATED);
     }
 
 
@@ -39,7 +43,11 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $category->update($request->all());
-        return response()->json('updated', Response::HTTP_OK);
+        return response()->json([
+            'success' => true,
+            'message' => 'category updated success',
+            'category' => $category
+        ], Response::HTTP_OK);
     }
 
 
