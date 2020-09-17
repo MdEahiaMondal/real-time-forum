@@ -12,7 +12,13 @@ class Question extends Model
     use HasFactory;
 
 
-    protected $guarded = [];
+    protected $fillable = [
+        'title',
+        'content',
+        'slug',
+        'category_id',
+        'user_id',
+    ];
 
     public static function boot()
     {

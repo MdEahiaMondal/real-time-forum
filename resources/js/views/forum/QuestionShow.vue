@@ -1,70 +1,79 @@
 <template>
-    <v-card
-        class="mx-auto"
-        v-if="question"
-    >
-        <v-card-title>
-            <v-list-item-avatar color="grey darken-3">
-            <v-img
-                class="elevation-6"
-                src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-            ></v-img>
-            </v-list-item-avatar>
-            <v-list-item-content>
-                <v-list-item-title>{{ question.user ? question.user.name : '' }} said {{ question.created_at }}</v-list-item-title>
-            </v-list-item-content>
-            <v-card-text class="headline font-weight-bold">
-                {{ question.title }}
-            </v-card-text>
-            <v-row
-                align="center"
-                justify="end"
-            >
-                <v-btn color="accent" dark>Replays</v-btn>
+   <div>
+       <div v-if="!editing">
+           <v-card
+               class="mx-auto"
+               v-if="question"
+           >
+               <v-card-title>
+                   <v-list-item-avatar color="grey darken-3">
+                       <v-img
+                           class="elevation-6"
+                           src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                       ></v-img>
+                   </v-list-item-avatar>
+                   <v-list-item-content>
+                       <v-list-item-title>{{ question.user ? question.user.name : '' }} said {{ question.created_at }}</v-list-item-title>
+                   </v-list-item-content>
+                   <v-card-text class="headline font-weight-bold">
+                       {{ question.title }}
+                   </v-card-text>
+                   <v-row
+                       align="center"
+                       justify="end"
+                   >
+                       <v-btn color="accent" dark>Replays</v-btn>
 
-            </v-row>
-        </v-card-title>
+                   </v-row>
+               </v-card-title>
 
-            <v-card-text class="font-weight-bold" v-html="content"> </v-card-text>
+               <v-card-text class="font-weight-bold" v-html="content"> </v-card-text>
 
-        <v-card-actions>
-            <v-list-item class="grow">
-                <v-row
-                    align="center"
-                    justify="end"
-                >
-                    <v-col md="6" v-if="access">
-                        <v-card-actions>
-                            <v-btn icon>
-                               <v-icon color="orange">mdi-border-color</v-icon>
-                            </v-btn>
-                            <v-btn icon @click="deleteQuestion">
-                               <v-icon color="red">mdi-delete</v-icon>
-                            </v-btn>
-                        </v-card-actions>
-                    </v-col>
-                    <v-col md="6">
-                        <v-icon class="mr-1">mdi-heart</v-icon>
-                        <span class="subheading mr-2">256</span>
-                        <span class="mr-1">·</span>
-                        <v-icon class="mr-1">mdi-share-variant</v-icon>
-                        <span class="subheading">45</span>
-                    </v-col>
-                </v-row>
-            </v-list-item>
-        </v-card-actions>
-    </v-card>
+               <v-card-actions>
+                   <v-list-item class="grow">
+                       <v-row
+                           align="center"
+                           justify="end"
+                       >
+                           <v-col md="6" v-if="access">
+                               <v-card-actions>
+                                   <v-btn icon @click="editQuestion">
+                                       <v-icon color="orange">mdi-border-color</v-icon>
+                                   </v-btn>
+                                   <v-btn icon @click="deleteQuestion">
+                                       <v-icon color="red">mdi-delete</v-icon>
+                                   </v-btn>
+                               </v-card-actions>
+                           </v-col>
+                           <v-col md="6">
+                               <v-icon class="mr-1">mdi-heart</v-icon>
+                               <span class="subheading mr-2">256</span>
+                               <span class="mr-1">·</span>
+                               <v-icon class="mr-1">mdi-share-variant</v-icon>
+                               <span class="subheading">45</span>
+                           </v-col>
+                       </v-row>
+                   </v-list-item>
+               </v-card-actions>
+           </v-card>
+       </div>
+       <question-edit v-if="editing" :question="question"></question-edit>
+   </div>
 </template>
 
 <script>
+import questionEdit from '../question/Edit'
 export default {
 name: "QuestionShow",
     data(){
         return {
             question: '',
+            editing: false
         }
     },
+    components: {questionEdit},
     created() {
+    this.listion()
         axios.get(`/api/questions/${this.$route.params.slug}`)
         .then(res => {
             this.question = res.data.data
@@ -92,6 +101,16 @@ name: "QuestionShow",
                 .catch(e => {
                     console.log(e.response.data.message)
                 })
+        } ,
+        editQuestion(){
+           this.editing = true
+        },
+        listion()
+        {
+            EventBus.$on('cancelEdit', () =>{
+                this.editing = false
+
+            })
         }
     }
 }
