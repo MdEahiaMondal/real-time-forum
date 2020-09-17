@@ -24,7 +24,7 @@ class ReplayController extends Controller
     {
         $replay = $question->replies()->create($request->all());
         return response()->json([
-            'replay' => new ReplayResource($replay),
+            'reply' => new ReplayResource($replay),
             'message' => 'A new replay created success'
         ], Response::HTTP_CREATED);
 
@@ -45,7 +45,7 @@ class ReplayController extends Controller
     {
         $updated_replay = $reply->update($request->all());
         return response()->json([
-            'replay' => new ReplayResource($updated_replay),
+            'reply' => new ReplayResource($updated_replay),
             'message' => 'Replay updated success'
         ], 200);
     }

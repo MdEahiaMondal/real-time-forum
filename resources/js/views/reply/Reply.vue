@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-card
-            class="mx-auto ml-5">
+            class="mx-auto">
             <v-card-title>
                 <v-list-item-avatar color="grey darken-3">
                     <v-img

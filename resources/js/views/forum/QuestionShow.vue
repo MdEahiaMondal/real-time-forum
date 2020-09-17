@@ -56,7 +56,7 @@
                    </v-list-item>
                </v-card-actions>
 
-               <replies :replies="question.replies"></replies>
+               <replies :replies="question.replies" :questionSlug="question.slug"></replies>
            </v-card>
        </div>
        <question-edit v-if="editing" :question="question"></question-edit>

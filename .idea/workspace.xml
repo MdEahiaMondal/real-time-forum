@@ -22,9 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="created replay component">
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="only show edit delete button that you are replay">
+      <change afterPath="$PROJECT_DIR$/resources/js/views/reply/ReplayCreate.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ReplayResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ReplayResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReplayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReplayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Replay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Replay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/forum/QuestionShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/forum/QuestionShow.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/reply/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/reply/Replies.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/reply/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/reply/Reply.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +219,7 @@
       <workItem from="1600126927010" duration="10048000" />
       <workItem from="1600212157865" duration="11527000" />
       <workItem from="1600296149521" duration="11998000" />
-      <workItem from="1600332679113" duration="8476000" />
+      <workItem from="1600332679113" duration="10623000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -510,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600340935120</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="only show edit delete button that you are replay">
+      <created>1600341914515</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1600341914515</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +544,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="make a helpers AppStorage form save something on local app storage" />
     <MESSAGE value="check token validating" />
     <MESSAGE value="more sucre jwt token on frontend" />
     <MESSAGE value="make a register component" />
@@ -557,7 +568,8 @@
     <MESSAGE value=" problem fixed" />
     <MESSAGE value="using egerlodding in model" />
     <MESSAGE value="created replay component" />
-    <option name="LAST_COMMIT_MESSAGE" value="created replay component" />
+    <MESSAGE value="only show edit delete button that you are replay" />
+    <option name="LAST_COMMIT_MESSAGE" value="only show edit delete button that you are replay" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
@@ -588,10 +600,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600340936374">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600341915609">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600340936374" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600341915609" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
