@@ -54,6 +54,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "QuestionShow",
   data: function data() {
@@ -69,6 +70,11 @@ __webpack_require__.r(__webpack_exports__);
     })["catch"](function (e) {
       console.log(e.response);
     });
+  },
+  computed: {
+    content: function content() {
+      return md.parse(this.question.content);
+    }
   }
 });
 
@@ -89,88 +95,97 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "v-card",
-    { staticClass: "mx-auto" },
-    [
-      _c(
-        "v-card-title",
+  return _vm.question
+    ? _c(
+        "v-card",
+        { staticClass: "mx-auto" },
         [
           _c(
-            "v-list-item-avatar",
-            { attrs: { color: "grey darken-3" } },
+            "v-card-title",
             [
-              _c("v-img", {
-                staticClass: "elevation-6",
-                attrs: {
-                  src:
-                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                }
-              })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-list-item-content",
-            [
-              _c("v-list-item-title", [
+              _c(
+                "v-list-item-avatar",
+                { attrs: { color: "grey darken-3" } },
+                [
+                  _c("v-img", {
+                    staticClass: "elevation-6",
+                    attrs: {
+                      src:
+                        "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-item-content",
+                [
+                  _c("v-list-item-title", [
+                    _vm._v(
+                      _vm._s(_vm.question.user ? _vm.question.user.name : "") +
+                        " said " +
+                        _vm._s(_vm.question.created_at)
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-card-text", { staticClass: "headline font-weight-bold" }, [
                 _vm._v(
-                  _vm._s(_vm.question.user ? _vm.question.user.name : "") +
-                    " said " +
-                    _vm._s(_vm.question.created_at)
+                  "\n            " + _vm._s(_vm.question.title) + "\n        "
                 )
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("v-card-text", { staticClass: "headline font-weight-bold" }, [
-            _vm._v("\n            " + _vm._s(_vm.question.title) + "\n        ")
-          ]),
-          _vm._v(" "),
-          _c(
-            "v-row",
-            { attrs: { align: "center", justify: "end" } },
-            [
-              _c("v-btn", { attrs: { color: "accent", dark: "" } }, [
-                _vm._v("Replays")
-              ])
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("v-card-text", { staticClass: "font-weight-bold" }, [
-        _vm._v(" " + _vm._s(_vm.question.content) + "  ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "v-card-actions",
-        [
-          _c(
-            "v-list-item",
-            { staticClass: "grow" },
-            [
+              ]),
+              _vm._v(" "),
               _c(
                 "v-row",
                 { attrs: { align: "center", justify: "end" } },
                 [
-                  _c("v-icon", { staticClass: "mr-1" }, [_vm._v("mdi-heart")]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "subheading mr-2" }, [
-                    _vm._v("256")
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "mr-1" }, [_vm._v("·")]),
-                  _vm._v(" "),
-                  _c("v-icon", { staticClass: "mr-1" }, [
-                    _vm._v("mdi-share-variant")
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "subheading" }, [_vm._v("45")])
+                  _c("v-btn", { attrs: { color: "accent", dark: "" } }, [
+                    _vm._v("Replays")
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-card-text", {
+            staticClass: "font-weight-bold",
+            domProps: { innerHTML: _vm._s(_vm.content) }
+          }),
+          _vm._v(" "),
+          _c(
+            "v-card-actions",
+            [
+              _c(
+                "v-list-item",
+                { staticClass: "grow" },
+                [
+                  _c(
+                    "v-row",
+                    { attrs: { align: "center", justify: "end" } },
+                    [
+                      _c("v-icon", { staticClass: "mr-1" }, [
+                        _vm._v("mdi-heart")
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "subheading mr-2" }, [
+                        _vm._v("256")
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mr-1" }, [_vm._v("·")]),
+                      _vm._v(" "),
+                      _c("v-icon", { staticClass: "mr-1" }, [
+                        _vm._v("mdi-share-variant")
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "subheading" }, [_vm._v("45")])
+                    ],
+                    1
+                  )
                 ],
                 1
               )
@@ -180,9 +195,7 @@ var render = function() {
         ],
         1
       )
-    ],
-    1
-  )
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true

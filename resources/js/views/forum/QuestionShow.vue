@@ -1,6 +1,7 @@
 <template>
     <v-card
         class="mx-auto"
+        v-if="question"
     >
         <v-card-title>
             <v-list-item-avatar color="grey darken-3">
@@ -24,7 +25,7 @@
             </v-row>
         </v-card-title>
 
-            <v-card-text class="font-weight-bold"> {{ question.content }}  </v-card-text>
+            <v-card-text class="font-weight-bold" v-html="content"> </v-card-text>
 
         <v-card-actions>
             <v-list-item class="grow">
@@ -58,6 +59,12 @@ name: "QuestionShow",
         }).catch(e => {
             console.log(e.response)
         })
+    },
+    computed:{
+        content()
+        {
+            return md.parse(this.question.content)
+        }
     }
 }
 </script>

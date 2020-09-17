@@ -17,6 +17,9 @@ Vue.component('vue-simplemde', VueSimplemde)
 import vuetify from './plugins/vuetify'
 import router from './router/index'
 
+import md from 'marked'
+window.md = md
+
 const app = new Vue({
     el: '#app',
     vuetify,
