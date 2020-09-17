@@ -55,6 +55,8 @@
                        </v-row>
                    </v-list-item>
                </v-card-actions>
+
+               <replies :replies="question.replies"></replies>
            </v-card>
        </div>
        <question-edit v-if="editing" :question="question"></question-edit>
@@ -63,6 +65,7 @@
 
 <script>
 import questionEdit from '../question/Edit'
+import Replies from "../reply/Replies";
 export default {
 name: "QuestionShow",
     data(){
@@ -71,7 +74,7 @@ name: "QuestionShow",
             editing: false
         }
     },
-    components: {questionEdit},
+    components: {Replies, questionEdit},
     created() {
     this.listion()
         axios.get(`/api/questions/${this.$route.params.slug}`)
