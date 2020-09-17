@@ -20,6 +20,9 @@ class Question extends Model
         'user_id',
     ];
 
+
+    protected $with = ['replies', 'user'];
+
     public static function boot()
     {
         parent::boot(); // we use parent of Model boot

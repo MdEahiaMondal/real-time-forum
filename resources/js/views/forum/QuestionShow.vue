@@ -22,7 +22,7 @@
                        align="center"
                        justify="end"
                    >
-                       <v-btn color="accent" dark>Replays</v-btn>
+                       <v-btn color="accent" dark>({{ question.reply_count}}) Replays</v-btn>
 
                    </v-row>
                </v-card-title>

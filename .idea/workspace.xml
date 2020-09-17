@@ -22,12 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="created category">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/categories/Create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/categories/Create.vue" afterDir="false" />
-    </list>
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment=" problem fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,7 +210,7 @@
       <workItem from="1600126927010" duration="10048000" />
       <workItem from="1600212157865" duration="11527000" />
       <workItem from="1600296149521" duration="11998000" />
-      <workItem from="1600332679113" duration="4613000" />
+      <workItem from="1600332679113" duration="5453000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -483,7 +478,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600336026087</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="category edit delete done">
+      <created>1600337430068</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1600337430068</updated>
+    </task>
+    <task id="LOCAL-00040" summary=" problem fixed">
+      <created>1600337517882</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1600337517883</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,8 +514,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="implement vuetify" />
-    <MESSAGE value="define footer and toolbar" />
     <MESSAGE value="install vue-router and implement and make login pages" />
     <MESSAGE value="submit form login" />
     <MESSAGE value="make a helpers AppStorage form save something on local app storage" />
@@ -530,7 +537,9 @@
     <MESSAGE value="edit delete done of question" />
     <MESSAGE value="make a category sidbar" />
     <MESSAGE value="created category" />
-    <option name="LAST_COMMIT_MESSAGE" value="created category" />
+    <MESSAGE value="category edit delete done" />
+    <MESSAGE value=" problem fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value=" problem fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
@@ -561,10 +570,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600336027211">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600337519070">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600336027211" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600337519070" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
