@@ -22,10 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="reply like part complete">
-      <change afterPath="$PROJECT_DIR$/app/Notifications/NewReplyNotification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_18_131422_create_notifications_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="create a new notification using database and set">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReplayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReplayController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +214,7 @@
       <workItem from="1600212157865" duration="11527000" />
       <workItem from="1600296149521" duration="11998000" />
       <workItem from="1600332679113" duration="13992000" />
-      <workItem from="1600408130693" duration="7056000" />
+      <workItem from="1600408130693" duration="7399000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -547,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600422505590</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="create a new notification using database and set">
+      <created>1600435408179</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1600435408179</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +574,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="after login or register return redirect to other page" />
     <MESSAGE value="create dynamic menu" />
     <MESSAGE value="change something" />
     <MESSAGE value="make question component" />
@@ -594,7 +598,8 @@
     <MESSAGE value="replay delete" />
     <MESSAGE value="replay updated success" />
     <MESSAGE value="reply like part complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="reply like part complete" />
+    <MESSAGE value="create a new notification using database and set" />
+    <option name="LAST_COMMIT_MESSAGE" value="create a new notification using database and set" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
@@ -625,10 +630,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600422506741">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600435409402">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600422506741" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600435409402" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>

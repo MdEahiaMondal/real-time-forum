@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\ReplayResource;
 use App\Models\Question;
 use App\Models\Replay;
+use App\Notifications\NewReplyNotification;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -23,6 +24,10 @@ class ReplayController extends Controller
     public function store(Question $question, Request $request)
     {
         $replay = $question->replies()->create($request->all());
+        $user = $question->user;
+
+        $user->notify(new NewReplyNotification($replay));
+
         return response()->json([
             'reply' => new ReplayResource($replay),
             'message' => 'A new replay created success'
