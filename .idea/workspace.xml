@@ -22,10 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="replay created success">
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="replay delete">
+      <change afterPath="$PROJECT_DIR$/resources/js/views/reply/EditReply.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReplayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReplayController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/reply/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/reply/Replies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/reply/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/reply/Reply.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,6 +183,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.1.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -215,7 +217,8 @@
       <workItem from="1600126927010" duration="10048000" />
       <workItem from="1600212157865" duration="11527000" />
       <workItem from="1600296149521" duration="11998000" />
-      <workItem from="1600332679113" duration="12065000" />
+      <workItem from="1600332679113" duration="13992000" />
+      <workItem from="1600408130693" duration="2761000" />
     </task>
     <task id="LOCAL-00001" summary="install ui for auth">
       <created>1599957203349</created>
@@ -525,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600344273769</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="replay delete">
+      <created>1600351203407</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1600351203407</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +557,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="more sucre jwt token on frontend" />
     <MESSAGE value="make a register component" />
     <MESSAGE value="assign register iss after register" />
     <MESSAGE value="after login or register return redirect to other page" />
@@ -572,17 +581,18 @@
     <MESSAGE value="created replay component" />
     <MESSAGE value="only show edit delete button that you are replay" />
     <MESSAGE value="replay created success" />
-    <option name="LAST_COMMIT_MESSAGE" value="replay created success" />
+    <MESSAGE value="replay delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="replay delete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.738@0.0.1024.738" timestamp="1599997367663" />
-    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1600308432650">
+    <state x="292" y="124" key="FileChooserDialogImpl" timestamp="1600358768276">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1600308432650" />
+    <state x="292" y="124" key="FileChooserDialogImpl/0.0.1024.738@0.0.1024.738" timestamp="1600358768276" />
     <state width="981" height="167" key="GridCell.Tab.0.bottom" timestamp="1600226911913">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
@@ -603,10 +613,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600344275149">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600351204568">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600344275149" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600351204568" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>

@@ -10,51 +10,80 @@
                     ></v-img>
                 </v-list-item-avatar>
                 <v-list-item-content>
-                    <v-list-item-title>{{ reply.user ? reply.user.name : '' }} said {{ reply.created_at }}</v-list-item-title>
+                    <v-list-item-title>{{ reply.user ? reply.user.name : '' }} said {{
+                            reply.created_at
+                        }}
+                    </v-list-item-title>
                 </v-list-item-content>
-                <v-card-text>
-                    {{ reply.body }}
+
+                <v-card-text v-if="editing">
+                    <edit-reply :reply="reply" :questionSlug="questionSlug" ></edit-reply>
                 </v-card-text>
+                <v-card-text v-else v-html="replyBody"></v-card-text>
+
             </v-card-title>
-            <v-card-actions v-if="own">
-                <v-btn small icon>
-                    <v-icon color="orange">mdi-pencil</v-icon>
-                </v-btn>
-                <v-btn small icon @click="deleteReplay">
-                    <v-icon color="red">mdi-delete</v-icon>
-                </v-btn>
-            </v-card-actions>
+            <div v-if="!editing">
+                <v-card-actions v-if="own">
+                    <v-btn small icon @click="editReply">
+                        <v-icon color="orange">mdi-pencil</v-icon>
+                    </v-btn>
+                    <v-btn small icon @click="deleteReplay">
+                        <v-icon color="red">mdi-delete</v-icon>
+                    </v-btn>
+                </v-card-actions>
+            </div>
             <v-divider></v-divider>
         </v-card>
     </div>
 </template>
 
 <script>
+import EditReply from "./EditReply";
 export default {
+    created() {
+        this.listen()
+    },
     name: "Reply",
+    components: {EditReply},
     props: ['reply', 'index', 'questionSlug'],
-    computed:
-    {
-        own(){
-            return User.own(this.reply.user.id)
+    data(){
+        return {
+            editing: false
         }
     },
-    methods:
-    {
-        deleteReplay()
+    computed:
         {
+            own() {
+                return User.own(this.reply.user.id)
+            },
+            replyBody()
+            {
+                return md.parse(this.reply.body)
+            }
+        },
+    methods:
+        {
+            deleteReplay() {
 
-            axios.delete(`http://localhost:8000/api/questions/${this.questionSlug}/replies/${this.reply.id}`)
-                .then(res => {
-                    EventBus.$emit('destroyReplay', this.index)
+                axios.delete(`http://localhost:8000/api/questions/${this.questionSlug}/replies/${this.reply.id}`)
+                    .then(res => {
+                        EventBus.$emit('destroyReplay', this.index)
+                    })
+                    .catch(e => {
+                        console.log(e.response.data.message)
+                    })
+            },
+
+            editReply()
+            {
+                this.editing = true
+            },
+            listen(){
+                EventBus.$on('cancelEdit', () => {
+                    this.editing = false;
                 })
-                .catch(e => {
-                    console.log(e.response.data.message)
-                })
-
-
+            }
         }
-    }
 }
 </script>
 

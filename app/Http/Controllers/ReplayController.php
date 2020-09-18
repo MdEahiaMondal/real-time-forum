@@ -43,9 +43,9 @@ class ReplayController extends Controller
 
     public function update(Question $question, Request $request, Replay $reply)
     {
-        $updated_replay = $reply->update($request->all());
+        $reply->update($request->all());
         return response()->json([
-            'reply' => new ReplayResource($updated_replay),
+            'reply' => new ReplayResource($reply),
             'message' => 'Replay updated success'
         ], 200);
     }
