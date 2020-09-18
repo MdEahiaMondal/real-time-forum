@@ -15,12 +15,12 @@
                         }}
                     </v-list-item-title>
                 </v-list-item-content>
-
+                <v-spacer></v-spacer>
+                <like :reply="reply"></like>
                 <v-card-text v-if="editing">
                     <edit-reply :reply="reply" :questionSlug="questionSlug" ></edit-reply>
                 </v-card-text>
                 <v-card-text v-else v-html="replyBody"></v-card-text>
-
             </v-card-title>
             <div v-if="!editing">
                 <v-card-actions v-if="own">
@@ -39,12 +39,13 @@
 
 <script>
 import EditReply from "./EditReply";
+import Like from "../like/Like";
 export default {
     created() {
         this.listen()
     },
     name: "Reply",
-    components: {EditReply},
+    components: {Like, EditReply},
     props: ['reply', 'index', 'questionSlug'],
     data(){
         return {

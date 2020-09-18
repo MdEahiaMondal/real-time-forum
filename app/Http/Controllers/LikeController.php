@@ -11,13 +11,10 @@ class LikeController extends Controller
 {
 
 
-
-
     public function store(Request $request, Replay $reply)
     {
         $reply->likes()->create([
-//            'user_id' => Auth::id()
-            'user_id' => '1'
+            'user_id' => Auth::id()
         ]);
 
         return response()->json([
@@ -27,10 +24,9 @@ class LikeController extends Controller
     }
 
 
-
     public function destroy(Replay $reply)
     {
-        $reply->likes()->where('user_id', '=', 1)->first()->delete();
+        $reply->likes->where('user_id', '=', Auth::id())->first()->delete();
         return response()->json([
             'message' => 'successfully you unlike.',
             'like' => null
