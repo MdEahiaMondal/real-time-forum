@@ -7,7 +7,7 @@
         <v-toolbar>
             <v-toolbar-title>Forum</v-toolbar-title>
             <v-spacer></v-spacer>
-            <app-notification></app-notification>
+            <app-notification v-if="loggedIn"></app-notification>
             <div class="hidden-sm-and-down">
                 <router-link v-for="menu in menus" :key="menu.title" v-if="menu.show" :to="{name: menu.toName}">
                     <v-btn text>{{ menu.title }}</v-btn>
@@ -28,7 +28,8 @@ export default {
                 {title: 'Category', toName: 'categories-create', show: User.loggedIn()},
                 {title: 'Logout', toName: 'logout', show: User.loggedIn()},
                 {title: 'Login', toName: 'login', show: !User.loggedIn()},
-            ]
+            ],
+            loggedIn: User.loggedIn()
         }
     },
 

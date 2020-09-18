@@ -26,8 +26,9 @@ class ReplayController extends Controller
         $replay = $question->replies()->create($request->all());
         $user = $question->user;
 
-        $user->notify(new NewReplyNotification($replay));
-
+        if ($replay->user_id !== $user->id){
+            $user->notify(new NewReplyNotification($replay));
+        }
         return response()->json([
             'reply' => new ReplayResource($replay),
             'message' => 'A new replay created success'

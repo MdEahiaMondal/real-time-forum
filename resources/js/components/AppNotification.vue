@@ -3,7 +3,7 @@
         <v-menu offset-y>
             <template v-slot:activator="{ on, attrs }">
                 <v-btn
-                    color="blue"
+                    :color="color"
                     dark
                     v-bind="attrs"
                     v-on="on"
@@ -42,6 +42,12 @@ export default {
             unreadCount: 0
         }
     },
+    computed:{
+        color()
+        {
+            return this.unreadCount > 0 ? 'indigo darken-3' : 'indigo lighten-2'
+        }
+    },
     methods: {
         getNotification() {
             axios.get(`http://localhost:8000/api/notification`)
@@ -59,6 +65,7 @@ export default {
                 .then(res => {
                     this.unread.splice(item, 1)
                     this.read.push(item)
+                    this.unreadCount --
                 })
                 .catch(e => {
                     console.log(e.response.data.message)
