@@ -27,12 +27,12 @@ const routes = [
         component: () => import('../views/forum/Forum')
     },
     {
-        path: '/forum/question/:slug',
+        path: '/questions/:slug',
         name: 'question-show',
         component: () => import('../views/forum/QuestionShow')
     },
     {
-        path: '/forum/question/create',
+        path: '/questions/create',
         name: 'question-create',
         component: () => import('../views/question/Create')
     },

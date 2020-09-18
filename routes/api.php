@@ -3,9 +3,12 @@
 use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ReplayController;
+use App\Http\Resources\NotificationResource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
@@ -25,6 +28,8 @@ Route::group([
 
 
 
+Route::get('notification', [NotificationController::class, 'index']);
+Route::post('notification/markAsRead', [NotificationController::class, 'markAsRead']);
 
 
 Route::apiResource('questions', QuestionController::class);

@@ -78,7 +78,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post('api/auth/login', this.loginAttr).then(function (res) {
-        _this.responseAfterLoggedIn(res);
+        User.responseAfterLoggedIn(res);
 
         _this.$router.push({
           name: 'forum'

@@ -65,7 +65,7 @@ export default {
         login(){
             axios.post('api/auth/login', this.loginAttr)
                 .then(res => {
-                    this.responseAfterLoggedIn(res)
+                    User.responseAfterLoggedIn(res)
                     this.$router.push({name: 'forum'})
                 })
                 .catch(error => {

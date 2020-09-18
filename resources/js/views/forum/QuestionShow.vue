@@ -31,21 +31,14 @@
 
                <v-card-actions>
                    <v-list-item class="grow">
-                       <v-row
-                           align="center"
-                           justify="end"
-                       >
-                           <v-col md="6" v-if="access">
-                               <v-card-actions>
-                                   <v-btn icon @click="editQuestion">
-                                       <v-icon color="orange">mdi-border-color</v-icon>
-                                   </v-btn>
-                                   <v-btn icon @click="deleteQuestion">
-                                       <v-icon color="red">mdi-delete</v-icon>
-                                   </v-btn>
-                               </v-card-actions>
-                           </v-col>
-                       </v-row>
+                       <v-card-actions v-if="access">
+                           <v-btn icon @click="editQuestion">
+                               <v-icon color="orange">mdi-border-color</v-icon>
+                           </v-btn>
+                           <v-btn icon @click="deleteQuestion">
+                               <v-icon color="red">mdi-delete</v-icon>
+                           </v-btn>
+                       </v-card-actions>
                    </v-list-item>
                </v-card-actions>
 
