@@ -22,14 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="install pusher and setup environment to broadcast">
-      <change afterPath="$PROJECT_DIR$/app/Events/LikeEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Listeners/LikeEventNotificationListener.php" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="implement pusher broadcast successfully">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/like/Like.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/like/Like.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,14 +218,7 @@
       <workItem from="1600296149521" duration="11998000" />
       <workItem from="1600332679113" duration="13992000" />
       <workItem from="1600408130693" duration="14250000" />
-      <workItem from="1600473575502" duration="4515000" />
-    </task>
-    <task id="LOCAL-00004" summary="define a relationship all model">
-      <created>1599960433848</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1599960433848</updated>
+      <workItem from="1600473575502" duration="5582000" />
     </task>
     <task id="LOCAL-00005" summary="define factory and seed">
       <created>1599963754795</created>
@@ -568,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600475267820</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="implement pusher broadcast successfully">
+      <created>1600478545544</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1600478545544</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +585,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="create question form" />
     <MESSAGE value="implement markdown editor" />
     <MESSAGE value="implement jwt token for every request" />
     <MESSAGE value="question create done" />
@@ -615,7 +609,8 @@
     <MESSAGE value="notification show read and unread all" />
     <MESSAGE value="notification done" />
     <MESSAGE value="install pusher and setup environment to broadcast" />
-    <option name="LAST_COMMIT_MESSAGE" value="install pusher and setup environment to broadcast" />
+    <MESSAGE value="implement pusher broadcast successfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement pusher broadcast successfully" />
   </component>
   <component name="WindowStateProjectService">
     <state x="317" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1600475810937">
@@ -654,10 +649,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600475269439">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600478546976">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600475269439" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600478546976" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
