@@ -40,5 +40,10 @@ window.Echo = new Echo({
     broadcaster: 'pusher',
     key: "eaab291c79189ef08af6",
     cluster: "ap2",
-    forceTLS: true
+    forceTLS: true,
+    auth: {
+        headers: {
+            Authorization: jwtToken
+        }
+    }
 });
