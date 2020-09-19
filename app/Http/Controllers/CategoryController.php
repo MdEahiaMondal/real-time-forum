@@ -8,12 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CategoryController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('jwt');
-    }
-
     public function index()
     {
         return response()->json(Category::latest()->get());

@@ -14,8 +14,20 @@ class Token {
     }
 
     decode(payload){
-        return JSON.parse(atob(payload))
+        if(this.isBase64(payload)){
+            return JSON.parse(atob(payload))
+        }
+        return  false;
     }
+
+    isBase64(payload){
+        try {
+            return  btoa(atob(payload)).replace(/=/g, "") == payload
+        }catch (e){
+            return  false
+        }
+    }
+
 }
 
 export default Token = new Token();

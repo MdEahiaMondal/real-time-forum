@@ -22,12 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="app.js:54690 POST http://localhost:8000/broadcasting/auth 403 (Forbidden) == problem solve only for broadcast to pusher">
-      <change afterPath="$PROJECT_DIR$/resources/js/helpers/Exception.js" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="if token is exipred  so go to logout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AppNotification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AppNotification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/apis/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/apis/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/helpers/Token.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/helpers/Token.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,14 +222,7 @@
       <workItem from="1600332679113" duration="13992000" />
       <workItem from="1600408130693" duration="14250000" />
       <workItem from="1600473575502" duration="7361000" />
-      <workItem from="1600520200024" duration="4506000" />
-    </task>
-    <task id="LOCAL-00008" summary="crude category done">
-      <created>1599983805728</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1599983805728</updated>
+      <workItem from="1600520200024" duration="5802000" />
     </task>
     <task id="LOCAL-00009" summary="question replay crude done">
       <created>1599988449898</created>
@@ -567,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600521695547</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="if token is exipred  so go to logout">
+      <created>1600530498761</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1600530498761</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +589,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="successfully create question" />
     <MESSAGE value="using marked for show markdown text" />
     <MESSAGE value="create a function for access permission" />
     <MESSAGE value="question delete complete" />
@@ -614,7 +613,8 @@
     <MESSAGE value="successfully count like by pusher in realtime" />
     <MESSAGE value="reply notification send to pusher" />
     <MESSAGE value="app.js:54690 POST http://localhost:8000/broadcasting/auth 403 (Forbidden) == problem solve only for broadcast to pusher" />
-    <option name="LAST_COMMIT_MESSAGE" value="app.js:54690 POST http://localhost:8000/broadcasting/auth 403 (Forbidden) == problem solve only for broadcast to pusher" />
+    <MESSAGE value="if token is exipred  so go to logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="if token is exipred  so go to logout" />
   </component>
   <component name="WindowStateProjectService">
     <state x="317" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1600475810937">
@@ -653,10 +653,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600521696707">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600530500111">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600521696707" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600530500111" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
