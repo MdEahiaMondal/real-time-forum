@@ -32,7 +32,6 @@ computed: {
         dec() {
             axios.delete(`http://localhost:8000/api/replies/${this.reply.id}/likes`)
                 .then(res => {
-                    console.log(res)
                     this.count --
                 })
                 .catch(e => {
@@ -43,7 +42,6 @@ computed: {
         inc() {
             axios.post(`http://localhost:8000/api/replies/${this.reply.id}/likes`)
                 .then(res => {
-                    console.log(res)
                     this.count ++
                 })
                 .catch(e => {

@@ -22,13 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="notification done">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/realtimeforam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/realtimeforam.iml" afterDir="false" />
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="install pusher and setup environment to broadcast">
+      <change afterPath="$PROJECT_DIR$/app/Events/LikeEvent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Listeners/LikeEventNotificationListener.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/like/Like.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/like/Like.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,14 +223,7 @@
       <workItem from="1600296149521" duration="11998000" />
       <workItem from="1600332679113" duration="13992000" />
       <workItem from="1600408130693" duration="14250000" />
-      <workItem from="1600473575502" duration="1049000" />
-    </task>
-    <task id="LOCAL-00003" summary="fill migration file">
-      <created>1599958193641</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1599958193641</updated>
+      <workItem from="1600473575502" duration="4515000" />
     </task>
     <task id="LOCAL-00004" summary="define a relationship all model">
       <created>1599960433848</created>
@@ -567,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600446798628</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="install pusher and setup environment to broadcast">
+      <created>1600475267819</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1600475267820</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +590,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="show question" />
     <MESSAGE value="create question form" />
     <MESSAGE value="implement markdown editor" />
     <MESSAGE value="implement jwt token for every request" />
@@ -614,9 +614,14 @@
     <MESSAGE value="finally store a notification data into database" />
     <MESSAGE value="notification show read and unread all" />
     <MESSAGE value="notification done" />
-    <option name="LAST_COMMIT_MESSAGE" value="notification done" />
+    <MESSAGE value="install pusher and setup environment to broadcast" />
+    <option name="LAST_COMMIT_MESSAGE" value="install pusher and setup environment to broadcast" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="317" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1600475810937">
+      <screen x="0" y="0" width="1024" height="738" />
+    </state>
+    <state x="317" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1024.738@0.0.1024.738" timestamp="1600475810937" />
     <state x="242" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599997367663">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
@@ -641,14 +646,18 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state width="981" height="167" key="GridCell.Tab.0.right/0.0.1024.738@0.0.1024.738" timestamp="1600226911913" />
+    <state x="289" y="96" key="NewPhpClassDialog" timestamp="1600475536407">
+      <screen x="0" y="0" width="1024" height="738" />
+    </state>
+    <state x="289" y="96" key="NewPhpClassDialog/0.0.1024.738@0.0.1024.738" timestamp="1600475536407" />
     <state x="13" y="14" key="SettingsEditor" timestamp="1599960867619">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600446800799">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600475269439">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600446800799" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600475269439" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
@@ -657,9 +666,9 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="168" y="165" width="672" height="677" key="run.anything.popup/0.0.1024.738@0.0.1024.738" timestamp="1600220282807" />
-    <state x="175" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1600436974223">
+    <state x="175" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1600476911309">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="175" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1024.738@0.0.1024.738" timestamp="1600436974223" />
+    <state x="175" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1024.738@0.0.1024.738" timestamp="1600476911309" />
   </component>
 </project>
