@@ -35,6 +35,12 @@ name: "Replies",
             EventBus.$on('destroyReplay', (index) =>{
                 this.content.splice(index, 1)
             })
+
+            Echo.private('App.User.' + User.id())
+                .notification((notification) => {
+                    console.log(notification.type);
+                });
+
         }
     }
 }
