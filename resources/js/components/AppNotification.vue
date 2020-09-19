@@ -57,6 +57,7 @@ export default {
                     this.unreadCount = res.data.unread.length
                 })
                 .catch(e => {
+                    Exception.helpers(e)
                     console.log(e.response.data.message)
                 })
         },

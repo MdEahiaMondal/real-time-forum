@@ -22,8 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="reply notification send to pusher">
+    <list default="true" id="ee8d83b3-a04e-4615-8dea-5c3df96db275" name="Default Changelist" comment="app.js:54690 POST http://localhost:8000/broadcasting/auth 403 (Forbidden) == problem solve only for broadcast to pusher">
+      <change afterPath="$PROJECT_DIR$/resources/js/helpers/Exception.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AppNotification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AppNotification.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -218,14 +222,7 @@
       <workItem from="1600332679113" duration="13992000" />
       <workItem from="1600408130693" duration="14250000" />
       <workItem from="1600473575502" duration="7361000" />
-      <workItem from="1600520200024" duration="1198000" />
-    </task>
-    <task id="LOCAL-00007" summary="create api resource collection for question and getPathAttribute on model">
-      <created>1599969449995</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1599969449995</updated>
+      <workItem from="1600520200024" duration="4506000" />
     </task>
     <task id="LOCAL-00008" summary="crude category done">
       <created>1599983805728</created>
@@ -563,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600521027669</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="app.js:54690 POST http://localhost:8000/broadcasting/auth 403 (Forbidden) == problem solve only for broadcast to pusher">
+      <created>1600521695547</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1600521695547</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +589,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="question create done" />
     <MESSAGE value="successfully create question" />
     <MESSAGE value="using marked for show markdown text" />
     <MESSAGE value="create a function for access permission" />
@@ -610,7 +613,8 @@
     <MESSAGE value="implement pusher broadcast successfully" />
     <MESSAGE value="successfully count like by pusher in realtime" />
     <MESSAGE value="reply notification send to pusher" />
-    <option name="LAST_COMMIT_MESSAGE" value="reply notification send to pusher" />
+    <MESSAGE value="app.js:54690 POST http://localhost:8000/broadcasting/auth 403 (Forbidden) == problem solve only for broadcast to pusher" />
+    <option name="LAST_COMMIT_MESSAGE" value="app.js:54690 POST http://localhost:8000/broadcasting/auth 403 (Forbidden) == problem solve only for broadcast to pusher" />
   </component>
   <component name="WindowStateProjectService">
     <state x="317" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1600475810937">
@@ -649,10 +653,10 @@
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="13" y="14" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1599960867619" />
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600521029770">
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2" timestamp="1600521696707">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
-    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600521029770" />
+    <state x="104" y="98" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1600521696707" />
     <state x="92" y="92" width="840" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599956807442">
       <screen x="0" y="0" width="1024" height="738" />
     </state>

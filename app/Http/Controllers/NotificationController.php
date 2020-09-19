@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class NotificationController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('jwt');
+    }
+
     public function index(){
         return [
             'read' => NotificationResource::collection(Auth::user()->readNotifications),

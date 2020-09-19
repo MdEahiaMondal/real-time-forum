@@ -7,6 +7,10 @@ Vue.component('main-home', require('./views/MainHome').default);
 import User from "./apis/User";
 window.User = User
 
+import Exception from "./helpers/Exception";
+window.Exception = Exception
+
+
 window.EventBus = new Vue();
 
 
